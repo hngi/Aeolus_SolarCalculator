@@ -2,30 +2,35 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 
 
 /* nav  bar */
 .mynav{
-    margin-bottom: 4.5em;
-    margin-top: 2em;
+    margin-bottom: 2.5em;
+    margin-top: 1em;
 }
 
-.mynav h2{
-    margin: 0;
+.mynav img{
+    display: inline-block;
+    margin-right: -2em;
+} 
+
+.mynav .img2{
+    margin-top: -15px;
+    margin-left: -0.5em;
 }
 
-.mynav h2 .izr{
-    color: #009900;
-}
+
 .mynav ul {
     list-style-type: none;
     display: block;
     margin: 0;
     padding: 0;
     float: right;
-    margin-top: -2em;
+    margin-top: 2em;
 }
 
 .mynav ul li{
@@ -36,18 +41,19 @@ body{
 }
 
 .mynav ul li a{
-    /* display: block; */
+    
     width: 4em;
     padding: 0.5em 1em;
     text-decoration: none;
-    color: grey;
+    color: #868686;;
     text-transform: capitalize;
     font-weight: 600;
 }
 
 .mynav ul li a:hover{
-    background-color: #b38600;
+    background-color: #9A9C27;
     color: white;
+    padding: 0.5em 1em;
     border-radius: 1em;
 }
 
@@ -55,7 +61,7 @@ body{
 /* form */
 
 #sign-up{
-    background-color: #00004d;
+    background-color: #441A7E;
 }
 
 
