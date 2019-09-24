@@ -1,0 +1,90 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* nav  bar */
+.mynav{
+    margin-bottom: 4.5em;
+    margin-top: 2em;
+}
+
+.mynav h2{
+    margin: 0;
+}
+
+.mynav h2 .izr{
+    color: #009900;
+}
+.mynav ul {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    float: right;
+    margin-top: -2em;
+}
+
+.mynav ul li{
+    
+    display: inline;
+    
+    
+}
+
+.mynav ul li a{
+    /* display: block; */
+    width: 4em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: grey;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.mynav ul li a:hover{
+    background-color: #b38600;
+    color: white;
+    border-radius: 1em;
+}
+
+
+/* form */
+
+#sign-up{
+    background-color: #00004d;
+}
+
+
+
+.container{
+    margin-top: 2em; 
+}
+
+.sign-form{
+    max-width: 80%;
+    margin: 2em auto;
+    background-color: white;
+    border: 1px solid#ccc;
+    box-shadow: 2px 2px 2px #ccc;
+    padding: 2em;
+    border-radius: 0.8em;
+}
+
+.sign-form h3{
+    text-align: center;
+}
+
+@media screen and (max-width: 600px){
+    .mynav{
+        display: flex;
+        flex-direction: column;
+    }
+    .mynav ul{
+        display: block;
+        margin-top: 2em;
+    }
+}
