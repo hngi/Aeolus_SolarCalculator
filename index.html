@@ -1,96 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Solarizr</title>
-<link rel="stylesheet" type="text/css" href="css/landingCSS.css">
-<link type="image/x-icon" rel="shortcut icon" href="images/icon1.png">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Solar Calculator &rsaquo; HNG 6 Team Aeolus</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Roboto:300,400,500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="./assets/app.css">
+	<link rel="stylesheet" href="./assets/app.css">
 </head>
 <body>
-<div id="intro-nav">
-    <div id="intro-nav-company">
-        <img src="images/icon1.png" class="company-logo-small" alt="blue tri-leaf vivix logo">
-        <span id="intro-nav-company-name">Solarizr</span>
-    </div>
-    <div id="intro-nav-sections">
-        <!-- Use 'onclick' to redirect -->
-        <div class="intro-nav-sections-buttons">Sign up</div>
-        <div class="intro-nav-sections-buttons">Login</div>
-        <div class="intro-nav-sections-buttons">Help</div>
-    </div>
-</div>
-<div id="body-main">
-    <div id="welcome-message">
-        <div id="welcome-text">
-            <p>Calculate how much solar power you need to run your home efficiently</p>
-            <p>Solarizr</p>
-            <p>The switch from regular power supply to solar is never easy, nonetheless cheap.</p>
-            <p>So lets give you a helping hand in estimating your home/office/space average power consumption.</p>
-            <p>Sign up now to use our free solar energy calculator</p>
-            <button type="button" id="welcome-button">Sign up</button>
-        </div>
-    </div>
-    <div id="body-main-reasons">
-        <p id="body-main-reasons-intro">WHY SHOULD I USE SOLARIZR?</p>
-        <div id="body-main-reasons-flex-container">
-            <div>
-                <p class="body-main-reasons-headers"><img src="images/check-circle.svg">FREE</p>
-                <p class="body-main-reasons-text">
-			        Solarizr doesn't require you to pay a cent before using. Simply sign up and you're good to go!
-		        </p>
-            </div>
-            <div>
-                <p class="body-main-reasons-headers"><img src="images/check-circle.svg">ACCURATE</p>
-                <p class="body-main-reasons-text">
-                    We take into account every single detail and ensure our calculation engine stays updated 
-                    to the best of the industry's standards. We believe you should not pay a penny more than you're
-                    supposed to and we stick to that belief firmly.
-		        </p>
-            </div>
-            <div>
-                <p class="body-main-reasons-headers"><img src="images/check-circle.svg">CLOUD STORAGE</p>
-                <p class="body-main-reasons-text">
-                    Access your estimates anywhere, anytime by simply signing in to your Solarizr account.
-                    Cloud storage ensures we deliver 24/7.
-		        </p>
-            </div>
-            <div>
-                <p class="body-main-reasons-headers"><img src="images/check-circle.svg">ECO-FRIENDLY</p>
-                <p class="body-main-reasons-text">
-                    Since we're an organization that's committed to encouraging the use of clean renewable energy, 
-                    we and our partners donate $1 to energy research centers every time a new user signs up.
-		        </p>
-            </div>
-        </div>
-    </div>
-</div>
-    <div id="body-footer">
-	    <div id="body-footer-sections">
-            <div>
-                <p>NAVIGATION</p>
-                <a href="">Sign up</a><br>
-                <a href="">Login</a><br>
-                <a href="">Categories</a><br>
-                <a href="">Appliances</a><br>
-            </div>
-            <div>
-                <p>RESOURCES</p>
-                    <a href="">About us</a><br>
-                    <a href="">Going Solar</a><br>
-                    <a href="">Help</a>
-            </div>
-            <div>
-                <p>SOCIALS</p>
-                    <img src="images/Social brands/facebook-f.svg" class="social-brand-icons" alt="fblogo" height="15px" width="15px"> &nbsp; <label class="contact-labels"> Solarizr_ng</label><br>
-                    <img src="images/Social brands/twitter.svg" class="social-brand-icons" alt="twitterlogo" height="15px" width="15px"> &nbsp; <label class="contact-labels"> @solariz_r</label><br>
-                    <img src="images/Social brands/yahoo.svg" class="social-brand-icons" alt="emaillogo" height="15px" width="15px"> &nbsp; <label class="contact-labels"> info@solar.com</label><br>
-                    <img src="images/Social brands/google-plus-g.svg" class="social-brand-icons" alt="gpluslogo" height="15px" width="15px"> &nbsp; <label class="contact-labels"> Solarizr Inc</label><br>
-                    <img src="images/Social brands/phone.svg" class="social-brand-icons" alt="phonelogo" height="15px" width="15px"> &nbsp; <label class="contact-labels"> +234 00000000</label>
-                
-            </div>
-        </div>
-        <p id="footer-text">All rights reserved &copy;2019 Team Aeolus <br> HNG Internship 6.0</p>
-    </div>
+	<div class="body-wrapper">
+		<div class="innerbody">
+			<!--
+				HEADER section
+
+				@andy
+			-->
+			<header>
+				<div id="logo">
+					<svg width="29" height="38" viewBox="0 0 29 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M14.6076 7.75955C13.3076 7.75955 12.2743 8.07621 11.5076 8.70955C10.7743 9.30955 10.4076 10.1262 10.4076 11.1595C10.4076 12.1595 10.8576 12.9595 11.7576 13.5595C12.691 14.1595 14.8076 14.8762 18.1076 15.7095C21.441 16.5095 24.0243 17.7262 25.8576 19.3595C27.691 20.9929 28.6076 23.3762 28.6076 26.5095C28.6076 29.6429 27.4243 32.1929 25.0576 34.1595C22.7243 36.0929 19.641 37.0595 15.8076 37.0595C10.2743 37.0595 5.29095 35.0095 0.857617 30.9095L5.50762 25.2095C9.27428 28.5095 12.7576 30.1595 15.9576 30.1595C17.391 30.1595 18.5076 29.8595 19.3076 29.2595C20.141 28.6262 20.5576 27.7929 20.5576 26.7595C20.5576 25.6929 20.1243 24.8595 19.2576 24.2595C18.391 23.6262 16.6743 22.9929 14.1076 22.3595C10.041 21.3929 7.05762 20.1429 5.15762 18.6095C3.29095 17.0429 2.35762 14.6095 2.35762 11.3095C2.35762 7.97621 3.54095 5.40954 5.90762 3.60955C8.30762 1.80954 11.291 0.909544 14.8576 0.909544C17.191 0.909544 19.5243 1.30954 21.8576 2.10954C24.191 2.90954 26.2243 4.04288 27.9576 5.50954L24.0076 11.2095C20.9743 8.90955 17.841 7.75955 14.6076 7.75955Z" fill="white"/>
+					</svg>
+				</div>
+				<!-- Selling point -->
+				<div class="container m-hero">
+					<div class="row">
+						<div class="col-sm-12">
+							The simpler way to check your solar billing
+						</div>
+						<div class="col-sm-12">
+							<div class="c-btn">
+								<a href="#" class="btn btn-lg m-cta">Calculate Power</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- art work -->
+				<div class="container a-work mt-4 text-center">
+					<div class="row">
+						<div class="col-sm-12 case mx-auto">
+							<img src="./assets/567578.png" alt="art work" class="img-fluid">
+						</div>
+					</div>
+				</div>
+			</header>
+			<!--
+				TESTIMONIAL section
+
+				[if you pick up this section, edit Line 53 comment and type your slack username just as in Line 20]
+			-->
+			<section class="testimonial">
+				
+			</section>
+			<!--
+				FEATURES section
+
+				[if you pick up this section, edit Line 61 comment and type your slack username just as in Line 20]
+
+				## for the meantime, skip this section. It is the section in the figma design that is left blank
+			-->
+			<section class="features">
+				
+			</section>
+			<!--
+				QUICK Calculate section
+                 @chux1
+				[if you pick up this section, edit Line 71 comment and type your slack username just as in Line 20]
+			-->
+			<section class="calculate-form-block">
+				
+			</section>
+		</div>
+
+		<!--
+			HEADER section
+
+			@andy
+		-->
+		<footer>
+			
+		</footer>
+	</div>
 </body>
 </html>
