@@ -1,0 +1,32 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2.5em;
+    margin-top: 1em;
+    padding: 10px;
+    font-weight: 900;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 2.5em;
+    margin-top: 1em;
+    padding: 10px;
+    font-weight: 900;
+
+}
+
+p {
+    text-align: center;
+    margin-bottom: 2.5em;
+    margin-top: 1em;
+    padding: 20px;
+    font-weight: 300;
+
+}
