@@ -7,4 +7,4 @@ Aeolus Solar Calculator is a Web Application that allows users calculate the cos
 - Fork the repo
 - Clone the forked repo
 - Begin making changes
-- Push and open a PR
+- Push your changes to the **staging** branch and open a PR. Any PR on the master branch wil be rejected.
