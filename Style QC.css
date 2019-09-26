@@ -1,0 +1,232 @@
+body
+{
+position: absolute;
+width: 375px;
+height: 869px;
+left: 0px;
+top: 1042px;
+background: #FFFFFF;
+}
+.Main
+{
+    position: absolute;
+width: 305px;
+height: 801px;
+left: 28px;
+top: -2px;
+
+background: #FFFFFF;
+}
+h3
+{
+    position: absolute;
+width: 158px;
+height: 27px;
+left: 0px;
+top: -75px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 23px;
+line-height: 27px;
+color: #E66E8A;
+}
+.Instance
+{
+position: absolute;
+width: 296px;
+height: 490px;
+left: 0px;
+top: 120px;
+
+background: #FFFFFF;
+}
+
+#Remove
+{
+    position: absolute;
+width: 100px;
+height: 14px;
+left: 190px;
+top: 25px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+font-size: 12px;
+line-height: 14px;
+color: #828282;
+}
+.Words1
+{
+    position: absolute;
+width: 235px;
+height: 42px;
+left: 24px;
+top: 130px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+
+color: #727475;
+}
+.Words2
+{
+    position: absolute;
+width: 245px;
+height: 21px;
+left: 24px;
+top: 184px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #727475;
+
+}
+.Words3
+{
+    position: absolute;
+width: 97px;
+height: 21px;
+left: 24px;
+top: 217px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #727475;
+
+}
+.Words4
+{
+position: absolute;
+width: 214px;
+height: 42px;
+left: 24px;
+top: 250px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #727475;
+}
+.Appliance
+{
+    position: absolute;
+width: 296px;
+height: 42px;
+left: 0px;
+top: 55.05px;
+
+background: #FFFFFF;
+border: 1px solid #DDDDDD;
+box-sizing: border-box;
+border-radius: 4px;
+}
+.Watts
+{
+    position: absolute;
+width: 296px;
+height: 42px;
+left: 0px;
+top: 105.17px;
+
+background: #FFFFFF;
+border: 1px solid #DDDDDD;
+box-sizing: border-box;
+border-radius: 4px;
+}
+.Minutes
+{
+    position: absolute;
+width: 296px;
+height: 42px;
+left: 0px;
+top: 155.3px;
+
+background: #FFFFFF;
+border: 1px solid #DDDDDD;
+box-sizing: border-box;
+border-radius: 4px;
+}
+.Days
+{
+    position: absolute;
+width: 296px;
+height: 42px;
+left: 0px;
+top: 205.56px;
+
+background: #FFFFFF;
+border: 1px solid #DDDDDD;
+box-sizing: border-box;
+border-radius: 4px;
+}
+.Hours
+{
+    position: absolute;
+width: 296px;
+height: 42px;
+left: 0px;
+top: 280.71px;
+
+background: #DDDDDD;
+border: 1px solid #DDDDDD;
+box-sizing: border-box;
+border-radius: 4px;
+}
+.Total
+{
+    position: absolute;
+width: 296px;
+height: 42px;
+left: 0px;
+top: 335.84px;
+
+background: #DDDDDD;
+border: 1px solid #DDDDDD;
+box-sizing: border-box;
+border-radius: 4px;
+}
+.Reset
+{
+    position: absolute;
+width: 35.38px;
+height: 14.04px;
+left: 5.9px;
+top: 385px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+font-size: 12px;
+line-height: 14px;
+color: #0099FF;
+
+}
+.New
+{
+    position: absolute;
+width: 103px;
+height: 14px;
+left: 187px;
+top: 385px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+font-size: 12px;
+line-height: 14px;
+color: #0099FF;
+}
