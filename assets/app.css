@@ -95,6 +95,24 @@ header::before{
     padding-left: 2rem;
     padding-right: 2rem;
 }
+.testimonial{
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+
+    color: #727475;
+}
+.testifier {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+
+    color: #2E73F4;
+}
 .a-work .case {
     /*max-width: 380px;*/
 }
