@@ -1,278 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Solar</title>
-    <!-- <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png"> -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Solar Calculator &rsaquo; HNG 6 Team Aeolus</title>
+
+    <!-- Bootstrap core CSS -->
     <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://unpkg.com/bulma@0.7.5/css/bulma.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
     />
     <link
-      rel="stylesheet prefetch"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/yeti/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-w6tc0TXjTUnYHwVwGgnYyV12wbRoJQo9iMlC2KdkdmVvntGgzT9jvqNEF/uKaF4m"
+      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/kanban.css" />
+    <style>
+      header {
+        padding: 50px 0 50px;
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
   </head>
+
   <body>
+    <!-- Navigation -->
     <div id="app">
-      <nav class="navbar has-shadow">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+        id="mainNav"
+      >
         <div class="container">
-          <div class="navbar-brand">
-            <a class="navbar-item" href="../"
-              ><img src="images/icon1.png" alt="Solar" />Solarizr</a
-            >
-            <div class="navbar-burger burger" data-target="navMenu">
-              <span></span><span></span><span></span>
-            </div>
-          </div>
-          <div class="navbar-menu" id="navMenu">
-            <div class="navbar-end">
-              <div class="navbar-item">
-                <a class="is-hoverable" @click="isVisible1 = true">Login</a>
-              </div>
-            </div>
+          <a class="navbar-brand js-scroll-trigger" href="#page-top"
+            >Solar Calculator &rsaquo; HNG 6 Team Aeolus</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">SignUp</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
-      <section class="hero is-info">
-        <div class="hero-body">
-          <div class="container">
-            <div class="card">
-              <div class="card-content">
-                <div class="content">
-                  <div class="columns">
-                    <div class="column is-7">
-                      <div class="control is-expanded">
-                        <div class="select is-large is-fullwidth">
-                          <select v-model="appliance.name">
-                            <option value="">Select Appliance</option>
 
-                            <option v-for="app in apps" :value="app.id">{{
-                              app.name
-                            }}</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="column">
-                      <div class="control is-expanded">
-                        <input
-                          class="input is-large id-fullwidth"
-                          type="number"
-                          placeholder="Number of Units"
-                          v-model="appliance.no"
-                        />
-                      </div>
-                    </div>
-                    <div class="column">
-                      <div class="control is-expanded">
-                        <input
-                          class="input is-large is-fullwidth"
-                          type="number"
-                          placeholder="Wattage"
-                          v-model="appliance.wattage"
-                        />
-                      </div>
-                    </div>
-                    <div class="column">
-                      <div class="control">
-                        <button
-                          class="button is-primary is-large"
-                          @click="addAppliance()"
-                        >
-                          Add Appliance
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <header class="bg-primary text-white">
+        <div class="container-fluid text-center">
+          <h1>Calculate Power Required for your home</h1>
+
+          <div class="card">
+            <div class="card-header">
+              Solar Power Calculator
             </div>
-          </div>
-        </div>
-        <div class="container"></div>
-        <table class="table is-responsive" style="min-height: 400px">
-          <thead>
-            <tr>
-              <th>Appliance Name</th>
-              <th>Number of Units</th>
-              <th>Power consumtion per Unit (Watts)</th>
-              <th>Total Power Consumtion (Watts)</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(appliance, index) in appliances" :key="index">
-              <td>{{ appName(appliance.name) }}</td>
-              <td>{{ appliance.no }}</td>
-              <td>{{ appliance.wattage }}</td>
-              <td>{{ appliance.wattage * appliance.no }}</td>
-              <td>
-                <button
-                  class="button is-danger"
-                  @click="deleteAppliance(index)"
-                >
-                  Delete
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th colspan="3">Total Power Required</th>
-              <th>{{ totalPower }} Watts</th>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="control">
-          <button class="button is-primary is-medium" @click="isVisible = true">
-            Sign Up & Save Data
-          </button>
-        </div>
-      </section>
-
-      <div class="columns is-mobile is-centered">
-        <div class="column is-half is-narrow"></div>
-      </div>
-
-      <div class="modal is-active" v-show="isVisible">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-          <header class="modal-card-head">
-            <p class="modal-card-title">
-              Sign Up
-            </p>
-            <button
-              @click="isVisible = false"
-              class="delete"
-              aria-label="close"
-            ></button>
-          </header>
-          <section class="modal-card-body">
-            <form id="register-form" @submit.prevent="saveData">
-              <div class="field">
-                <label class="label" for="username">Name</label>
-                <div class="control ">
-                  <input
-                    class="input"
-                    type="text"
-                    placeholder="Full Name"
-                    name="name"
-                    v-model="user.name"
-                  />
-                </div>
-                <label class="label" for="email">Email</label>
-                <div class="control ">
-                  <input
-                    class="input"
-                    type="email"
-                    placeholder="Email"
-                    name="email"
-                    v-model="user.email"
-                  />
-                </div>
-
-                <div class="columns">
-                  <div class="column">
-                    <label class="label" for="password">Password</label>
-                    <div class="control ">
-                      <input
-                        class="input"
-                        type="password"
-                        placeholder="Password"
-                        name="password"
-                        v-model="user.password"
-                      />
-                    </div>
-                  </div>
-                  <div class="column">
-                    <label class="label" for="retypePassword"
-                      >Re-Type Password</label
+            <div class="card-body">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <select
+                      class="form-control form-control-lg"
+                      v-model="appliance.name"
                     >
-                    <div class="control ">
-                      <input
-                        class="input"
-                        type="password"
-                        v-model="user.password_confirmation"
-                        placeholder="Confirm Password"
-                        name="retypePassword"
-                      />
-                    </div>
+                      <option value="">Select Appliance</option>
+                      <option v-for="app in apps" :value="app.id">{{
+                        app.name
+                      }}</option>
+                    </select>
                   </div>
-                </div>
-                <div class="field is-grouped">
-                  <div class="control">
-                    <button class="button is-primary is-medium" type="submit">
-                      Register
+
+                  <div class="form-group col-md-2">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Quantity"
+                      v-model="appliance.no"
+                    />
+                  </div>
+                  <div class="form-group col-md-2">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Wattage"
+                      v-model="appliance.wattage"
+                    />
+                  </div>
+                  <div class="form-group col-md-2">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Hours/Day"
+                      v-model="appliance.hour"
+                    />
+                  </div>
+
+                  <div class="form-group col">
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-lg"
+                      @click="addAppliance"
+                    >
+                      Add Appliance
                     </button>
                   </div>
                 </div>
-              </div>
-            </form>
-          </section>
-        </div>
-      </div>
-
-      <div class="modal is-active" v-show="isVisible1">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-          <header class="modal-card-head">
-            <p class="modal-card-title">
-              Login
-            </p>
-            <button
-              @click="isVisible1 = false"
-              class="delete"
-              aria-label="close"
-            ></button>
-          </header>
-          <section class="modal-card-body">
-            <div class="notification is-danger" v-if="login.error">
-              <button class="delete"></button>
-              {{ login.error }}
+              </form>
             </div>
-            <form @submit.prevent="loginUser" class="box">
-              <div class="field">
-                <label for="" class="label">Email</label>
-                <div class="control">
-                  <input
-                    type="email"
-                    placeholder="Email address"
-                    class="input"
-                    v-model="login.email"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="field">
-                <label for="" class="label">Password</label>
-                <div class="control">
-                  <input
-                    type="password"
-                    placeholder="*******"
-                    class="input"
-                    v-model="login.password"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="field">
-                <label for="" class="checkbox">
-                  <input type="checkbox" />
-                  Remember me
-                </label>
-              </div>
-              <div class="field">
-                <button class="button is-success is-medium" type="submit">
-                  Login
-                </button>
-              </div>
-            </form>
-          </section>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="row">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Appliance Name</th>
+                  <th>Number of Units</th>
+                  <th>Hours On Per Day</th>
+                  <th>Watts</th>
+                  <th>Watt Hours per Day</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(appliance, index) in appliances" :key="index">
+                  <td>{{ appName(appliance.name) }}</td>
+                  <td>{{ appliance.no }}</td>
+                  <td>{{ appliance.hour }}</td>
+                  <td>{{ appliance.wattage }}</td>
+                  <td>
+                    {{ appliance.wattage * appliance.no * appliance.hour }}
+                  </td>
+                  <td>
+                    <button
+                      class="btn btn-danger"
+                      @click="deleteAppliance(appliance.name)"
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="3">Total Watt Hours per Day</th>
+                  <th>{{ totalPower }}</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
-
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/main.js"></script>

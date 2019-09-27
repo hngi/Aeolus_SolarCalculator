@@ -4,7 +4,7 @@ new Vue({
   el: "#app",
   data: {
     appliances: [],
-    appliance: { name: "", no: "", wattage: "" },
+    appliance: { name: "", no: "", wattage: "", hour: "" },
     user: { name: "", email: "", password: "", password_confirmation: "" },
     login: { email: "", password: "", error: "" },
     apps: [],
@@ -16,18 +16,21 @@ new Vue({
       if (
         this.appliance.name === "" ||
         this.appliance.no === "" ||
-        this.appliance.wattage === ""
+        this.appliance.wattage === "" ||
+        this.appliance.hour === ""
       ) {
         alert("Please fill all input fields");
       } else {
         const val = this.appliances.push({
           name: this.appliance.name,
           no: this.appliance.no,
-          wattage: this.appliance.wattage
+          wattage: this.appliance.wattage,
+          hour: this.appliance.hour
         });
         this.appliance.name = "";
         this.appliance.no = "";
         this.appliance.wattage = "";
+        this.appliance.hour = "";
       }
     },
     saveData() {
@@ -110,7 +113,7 @@ new Vue({
   computed: {
     totalPower: function() {
       return this.appliances
-        .map(appliance => appliance.no * appliance.wattage)
+        .map(appliance => appliance.no * appliance.hour * appliance.wattage)
         .reduce((prev, curr) => prev + curr, 0);
     }
   },
