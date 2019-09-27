@@ -6,7 +6,10 @@
 [//]: # (UI Contributors table starts)
 
 | UI | Slack username | Figma URI for UI |
-| --------- | @loki | https://www.figma.com/file/beYUUuXcKRU5PT4KY4VR2M/Solar-Calculation-Page?node-id=0%3A1 |
+|----|----------------|------------------|
+| Collaborated | @loki | https://www.figma.com/file/beYUUuXcKRU5PT4KY4VR2M/Solar-Calculation-Page?node-id=0%3A1 |
+| Mobile Design | @andy | https://www.figma.com/file/gQdpVyfNkwycu4Rbd2EU5J/Aeolus-Mobile-Design |
+| Desktop Design | @andy | https://www.figma.com/file/MuzB3KVUCBKUGBB3t0mwYu/Aeolus-Desktop-Design |
 
 [//]: # (UI Contributors table ends)
 
@@ -15,6 +18,6 @@
 [//]: # (UX Contributors table starts)
 
 | UX | Slack username | Figma Prototype |
-| -- | @loki | https://www.figma.com/file/beYUUuXcKRU5PT4KY4VR2M/Solar-Calculation-Page?node-id=0%3A1  |
 
 [//]: # (UX Contributors table ends)
+
