@@ -8,6 +8,7 @@
 | UI | Slack username | Figma URI for UI |
 |----|----------------|------------------|
 | Collaborated | @loki | https://www.figma.com/file/beYUUuXcKRU5PT4KY4VR2M/Solar-Calculation-Page?node-id=0%3A1 |
+| Collaborated | @oluwadolamipo | https://www.figma.com/file/IZEKfYfAGttJkORPpAkYOT/Team-Aeolus-andy |
 | Mobile Design | @andy | https://www.figma.com/file/gQdpVyfNkwycu4Rbd2EU5J/Aeolus-Mobile-Design |
 | Desktop Design | @andy | https://www.figma.com/file/MuzB3KVUCBKUGBB3t0mwYu/Aeolus-Desktop-Design |
 
