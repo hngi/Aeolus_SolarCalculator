@@ -1,6 +1,6 @@
 $('#google-button').on('click', function() {
 	// Initialize with your OAuth.io app public key
-	OAuth.initialize('AIzaSyA1MQ2XPfFzyhWP0sxnixXupaOKFK0tcLs');
+	OAuth.initialize('K1PQlRVXc63StttFrZGj4V68dpY');
   // Use popup for oauth
   // Alternative is redirect
   OAuth.popup('google').then(google => {
