@@ -30,7 +30,7 @@ h1, h3 {
         margin-left: -15px;
     }
 
-    .text {
+    .text, .steps {
         font-weight: 300;
         font-size: 25px;
         line-height: 138.87%;
@@ -39,7 +39,7 @@ h1, h3 {
     }
 
     .pic {
-        width: 50%;
+        
         border: 2px solid #09F;
         border-radius: 10px;
         margin: 50px;
