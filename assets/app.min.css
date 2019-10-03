@@ -15,6 +15,19 @@ body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin
     font-weight: 500;
     font-size: 20px;
     text-align: center;
+    color: #2E73F4;
+}
 
+.features {
+    border: solid 10px #09F;
+    box-sizing: border-box;
+    margin: 50px auto;
+    border: 5px solid #2E73F4;
+    width: 400px;    
+    font-family: Roboto\\\;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
     color: #2E73F4;
 }
