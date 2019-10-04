@@ -31,3 +31,8 @@ body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin
     text-align: center;
     color: #2E73F4;
 }
+.sticky {
+  position:fixed;
+  top:0;
+  width:100%;  
+}
