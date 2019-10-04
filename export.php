@@ -90,12 +90,12 @@ header('Content-Type: application/json');
 
 try {
     $mail->isSMTP();
-    $mail->Host = 'smtp.googlemail.com';  //gmail SMTP server
+    $mail->Host = '';  
     $mail->SMTPAuth = true;
-    $mail->Username = 'sure.com.ng@gmail.com';   //username
-    $mail->Password = 'touchnotmyaccunt_2019';   //password
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port = 465;                    //smtp port
+    $mail->Username = '';   
+    $mail->Password = '';   
+    $mail->SMTPSecure = '';
+    $mail->Port = 465;                    
   
     $mail->setFrom('admin@sure.ng', 'Andikan Gabriel (Slack - @andy)');
     $mail->addAddress($to, $name);
