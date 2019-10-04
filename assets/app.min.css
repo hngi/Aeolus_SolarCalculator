@@ -220,3 +220,8 @@ ul.trial-list li {
     left: 20%;
     top: -805px;
 }
+.sticky{
+    position:fixed;
+    top:0;
+    width:100%;
+}
