@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Solar Calculator &rsaquo; HNG 6 Team Aeolus</title>
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/yeti/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-w6tc0TXjTUnYHwVwGgnYyV12wbRoJQo9iMlC2KdkdmVvntGgzT9jvqNEF/uKaF4m"
+      crossorigin="anonymous"
+    />
+    <style>
+      header {
+        padding: 50px 0 50px;
+      }
+      #home {
+    padding-left: 100px;
+    
+          }
+    </style>
+
+    <!-- Custom styles for this template -->
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <div id="app">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+        id="mainNav"
+      >
+         <div id="home">
+                  <a href="https://aeolus-calculator.000webhostapp.com/">
+                    <svg width="29" height="38" viewBox="0 0 29 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.6076 7.75955C13.3076 7.75955 12.2743 8.07621 11.5076 8.70955C10.7743 9.30955 10.4076 10.1262 10.4076 11.1595C10.4076 12.1595 10.8576 12.9595 11.7576 13.5595C12.691 14.1595 14.8076 14.8762 18.1076 15.7095C21.441 16.5095 24.0243 17.7262 25.8576 19.3595C27.691 20.9929 28.6076 23.3762 28.6076 26.5095C28.6076 29.6429 27.4243 32.1929 25.0576 34.1595C22.7243 36.0929 19.641 37.0595 15.8076 37.0595C10.2743 37.0595 5.29095 35.0095 0.857617 30.9095L5.50762 25.2095C9.27428 28.5095 12.7576 30.1595 15.9576 30.1595C17.391 30.1595 18.5076 29.8595 19.3076 29.2595C20.141 28.6262 20.5576 27.7929 20.5576 26.7595C20.5576 25.6929 20.1243 24.8595 19.2576 24.2595C18.391 23.6262 16.6743 22.9929 14.1076 22.3595C10.041 21.3929 7.05762 20.1429 5.15762 18.6095C3.29095 17.0429 2.35762 14.6095 2.35762 11.3095C2.35762 7.97621 3.54095 5.40954 5.90762 3.60955C8.30762 1.80954 11.291 0.909544 14.8576 0.909544C17.191 0.909544 19.5243 1.30954 21.8576 2.10954C24.191 2.90954 26.2243 4.04288 27.9576 5.50954L24.0076 11.2095C20.9743 8.90955 17.841 7.75955 14.6076 7.75955Z" fill="white"/>
+                    </svg>  
+                
+                  </a>
+                </div><div class="container">
+         
+          <a class="navbar-brand js-scroll-trigger" href="#page-top"
+            >Solar Calculator &rsaquo; HNG 6 Team Aeolus</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">SignUp</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+            </ul>
+           </div>
+        </div>
+      </nav>
+
+      <header class="bg-primary text-white">
+         <div class="container-fluid text-center">
+          <h1>Calculate Power Required for your home</h1>
+
+          <div class="card">
+            <div class="card-header">
+              Solar Power Calculator
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <select
+                      class="form-control form-control-lg"
+                      v-model="appliance.name"
+                    >
+                      <option value="">Select Appliance</option>
+                      <option v-for="app in apps" :value="app.id">{{
+                        app.name
+                      }}</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group col-md-2">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Quantity"
+                      v-model="appliance.no"
+                    />
+                  </div>
+                  <div class="form-group col-md-2">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Wattage"
+                      v-model="appliance.wattage"
+                    />
+                  </div>
+                  <div class="form-group col-md-2">
+                    <input
+                      type="text"
+                      class="form-control form-control-lg"
+                      placeholder="Hours/Day"
+                      v-model="appliance.hour"
+                    />
+                  </div>
+
+                  <div class="form-group col">
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-lg"
+                      @click="addAppliance"
+                    >
+                      Add Appliance
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="row">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Appliance Name</th>
+                  <th>Number of Units</th>
+                  <th>Hours On Per Day</th>
+                  <th>Watts</th>
+                  <th>Watt Hours per Day</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(appliance, index) in appliances" :key="index">
+                  <td>{{ appName(appliance.name) }}</td>
+                  <td>{{ appliance.no }}</td>
+                  <td>{{ appliance.hour }}</td>
+                  <td>{{ appliance.wattage }}</td>
+                  <td>
+                    {{ appliance.wattage * appliance.no * appliance.hour }}
+                  </td>
+                  <td>
+                    <button
+                      class="btn btn-danger"
+                      @click="deleteAppliance(appliance.name)"
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="3">Total Watt Hours per Day</th>
+                  <th>{{ totalPower }}</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
