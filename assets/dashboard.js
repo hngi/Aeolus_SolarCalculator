@@ -10,6 +10,18 @@ $(function() {
             }
         }
     }
+    window.onscroll= function() {myFunction()};
+var header = document.getElementById("m-header");
+var sticky = header.offsetTop;
+function myFunction() {
+	if(window.pageYOffset > sticky) {
+	header.classList.add("sticky");
+	}	else	{
+		header.classList.remove("sticky");
+	}
+
+
+}
 
     function update_ultimate_total() {
         var sum = 0;
