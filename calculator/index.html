@@ -11,6 +11,10 @@
 
     <title>Solar Calculator &rsaquo; HNG 6 Team Aeolus</title>
 
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/bulma@0.7.5/css/bulma.min.css"
+  />
     <!-- Bootstrap core CSS -->
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -26,7 +30,7 @@
     />
     <style>
       header {
-        padding: 50px 0 50px;
+        padding: 100px 0 50px;
       }
     </style>
 
@@ -58,10 +62,10 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#">SignUp</a>
+                <a class="nav-link" @click="isVisible = true">SignUp</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" @click="isVisible1 = true">Login</a>
               </li>
             </ul>
           </div>
@@ -93,7 +97,7 @@
 
                   <div class="form-group col-md-2">
                     <input
-                      type="text"
+                      type="number"
                       class="form-control form-control-lg"
                       placeholder="Quantity"
                       v-model="appliance.no"
@@ -101,7 +105,7 @@
                   </div>
                   <div class="form-group col-md-2">
                     <input
-                      type="text"
+                      type="number"
                       class="form-control form-control-lg"
                       placeholder="Wattage"
                       v-model="appliance.wattage"
@@ -109,7 +113,7 @@
                   </div>
                   <div class="form-group col-md-2">
                     <input
-                      type="text"
+                      type="number"
                       class="form-control form-control-lg"
                       placeholder="Hours/Day"
                       v-model="appliance.hour"
@@ -173,6 +177,150 @@
           </div>
         </div>
       </div>
+      
+    </section>
+
+    <div class="columns is-mobile is-centered">
+      <div class="column is-half is-narrow"></div>
+    </div>
+
+    <div class="modal is-active" v-show="isVisible">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">
+            Sign Up
+          </p>
+          <button
+            @click="isVisible = false"
+            class="delete"
+            aria-label="close"
+          ></button>
+        </header>
+        <section class="modal-card-body">
+          <form id="register-form" @submit.prevent="saveData">
+            <div class="field">
+              <label class="label" for="username">Name</label>
+              <div class="control ">
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Full Name"
+                  name="name"
+                  v-model="user.name"
+                />
+              </div>
+              <label class="label" for="email">Email</label>
+              <div class="control ">
+                <input
+                  class="input"
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  v-model="user.email"
+                />
+              </div>
+
+              <div class="columns">
+                <div class="column">
+                  <label class="label" for="password">Password</label>
+                  <div class="control ">
+                    <input
+                      class="input"
+                      type="password"
+                      placeholder="Password"
+                      name="password"
+                      v-model="user.password"
+                    />
+                  </div>
+                </div>
+                <div class="column">
+                  <label class="label" for="retypePassword"
+                    >Re-Type Password</label
+                  >
+                  <div class="control ">
+                    <input
+                      class="input"
+                      type="password"
+                      v-model="user.password_confirmation"
+                      placeholder="Confirm Password"
+                      name="retypePassword"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="field is-grouped">
+                <div class="control">
+                  <button class="btn btn-primary is-medium" type="submit">
+                    Register
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <div class="modal is-active" v-show="isVisible1">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">
+            Login
+          </p>
+          <button
+            @click="isVisible1 = false"
+            class="delete"
+            aria-label="close"
+          ></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="notification is-danger" v-if="login.error">
+            <button class="delete"></button>
+            {{ login.error }}
+          </div>
+          <form @submit.prevent="loginUser" class="box">
+            <div class="field">
+              <label for="" class="label">Email</label>
+              <div class="control">
+                <input
+                  type="email"
+                  placeholder="Email address"
+                  class="input"
+                  v-model="login.email"
+                  required
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label for="" class="label">Password</label>
+              <div class="control">
+                <input
+                  type="password"
+                  placeholder="*******"
+                  class="input"
+                  v-model="login.password"
+                  required
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label for="" class="checkbox">
+                <input type="checkbox" />
+                Remember me
+              </label>
+            </div>
+            <div class="field">
+              <button class="btn btn-primary is-medium" type="submit">
+                Login
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+  </div>
     </div>
     <!-- Bootstrap core JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
