@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    font-size: 12px;
+}
+#intro-nav {
+    background-color: #111111;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 8vh;
+    max-height: 50px;
+    min-height: 48px;
+    opacity: 0.99;
+    margin-top: 0;
+    display: flex;
+    flex-flow: row;
+    top: 0;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#intro-nav-company {
+    width: fit-content !important;
+    padding: auto auto;
+    margin-left: 3%;
+    padding-top: 0.8%;
+}
+#intro-nav-company img {
+    vertical-align: middle;
+	margin-top: 2%;
+    height: 25px;
+    width: 25px;
+    padding: 0 7px 10.5px 2px;
+}
+.company-logo-small {
+    height: 30px;
+    width: 30px;
+}
+#intro-nav-company-name {
+    color: #bcbcbc;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.65em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#intro-nav-sections {
+    display: flex;
+    flex-flow: row;
+    width: 27% !important;
+    margin-left: auto;
+}
+.intro-nav-sections-buttons {
+    width: 33%;
+    color: #bcbcbc;
+    font-size: 0.8em;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 4.5% 1%;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.intro-nav-sections-buttons:hover {
+    box-shadow: 0 4px 8px 0 rgba(200, 200, 200, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+    color: rgb(231, 201, 31);
+    transition: color 0.5s, box-shadow 0.5s;
+}
+#welcome-message {
+    background-image: url("data/images/backG4.jpg");
+    height: 700px;
+    width: 100%;
+    background-size: cover;
+    text-align: center;  
+}
+#welcome-text {
+    top: 28%;
+    position: relative;
+    text-shadow: 1px 1px rgba(0, 0, 0, 4);
+    color: tomato;
+}
+#welcome-text p:nth-child(1) {
+    font-size: 1.4em;
+    color: white;
+    font-family: Revista;
+    text-shadow: 1.5px 1.5px 1.5px black;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#welcome-text p:nth-child(2) {
+    font-size: 4.3em;
+    color: rgb(231, 201, 31);
+    text-shadow: 1.5px 1.5px 1.5px black;
+    font-family: arial;
+    margin: 25px auto;
+}
+#welcome-text p:nth-child(3), p:nth-child(4), p:nth-child(5)  {
+    color: ;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-shadow: 0.8px 0.8px 0.8px black;
+    margin: auto auto 15px auto;
+}
+#welcome-button {
+    width: 11%;
+    height: 40px;
+    border: none;
+    border-radius: 25px;
+    background-color: limegreen;
+    color: white;
+    margin-top: 20px;
+    font-weight: bold;
+}
+#body-main-reasons-intro {
+    color: #888888;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    font-family: revista;
+    font-size: 1.3em;
+    text-align: center;
+    padding-top: 80px;
+}
+#body-main-reasons-flex-container {
+    display: flex;
+    flex-flow: row;
+    width: 90%;
+    margin: 25px auto 50px auto;
+}
+#body-main-reasons-flex-container div {
+    width: 24%;
+    text-align: center;
+    margin: 0 1.5%;
+}
+#body-main-reasons-flex-container img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.body-main-reasons-headers {
+    font-size: 2em;
+    font-weight: bold;
+    color: #444444;
+}
+.body-main-reasons-text {
+	color: #777777;
+	line-height: 1.65;
+	padding: 0 10px;
+	font-size: 1.12em;
+}
+#body-footer {
+	background-color: #f0f0f0;
+    padding: 15px;
+    margin-top: 10px;
+}
+#body-footer-sections {
+	display: flex;
+    flex-flow: row;
+    width: 96%;
+    margin: 0 auto;
+}
+#body-footer-sections > div {
+	width: 33.3%;
+}
+#body-footer-sections > div > p:nth-Child(1) {
+	font-size: 1.15em;
+	color: #272a3d;
+	font-family: revista;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+}
+#body-footer-sections > div > a, label {
+	color: #999999;
+    text-decoration: none;
+    font-size: 1.12em;
+    line-height: 1.4;
+}
+#footer-text {
+    text-align: center;
+    color: #999999;
+    padding-top: 5px;
+}
