@@ -1,0 +1,84 @@
+body {
+	background-color: #f7f9fa;
+}
+.innerbody {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    padding: 0;
+    margin-bottom: 0;
+    position: relative;
+}
+.header .header-wrapper {
+    background: #ffffff;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    height: 70px;
+}
+.header .content {
+}
+.header .logo {
+    position: absolute;
+    top: 19px;
+    left: 25px;
+}
+.header .logo-main {
+    width: 101px;
+    height: 30px;
+}
+
+.extra-link {
+	padding: 18px 30px;
+	font-size: 18px;
+}
+
+.new-container {
+	text-align: center;
+	max-width: 300px;
+	position: relative;
+	margin-top: 15%;
+	font-family: 'Open Sans', sans-serif;
+}
+.new-container > a {
+	font-weight: 600;
+}
+.wbg {
+	background-color: #fff!important;
+}
+.form-layout {
+	padding: 20px;
+	border-radius: 12px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.25);
+}
+.f-head {
+	font-weight: 600;
+}
+.btn-mail {
+    background: #720e9e;
+    color: #fff;
+    cursor: pointer;
+}
+.btn-mail:hover {
+    color: #fff;
+    background:#4a00a0;
+}
+.loading, .error, .success {
+    background-image: url('https://res.cloudinary.com/andikan/image/upload/v1570249855/loader_krxxpx.svg')!important;
+    background-repeat: no-repeat!important;
+    background-position: center right calc(.375em + .1875rem)!important;
+    background-size: auto!important;
+}
+
+.error {
+    background-image: url('https://res.cloudinary.com/andikan/image/upload/v1570250828/error_ahwq3n.png')!important;
+}
+
+.success {
+    background-image: url('https://res.cloudinary.com/andikan/image/upload/v1570250832/success_in42jv.png')!important;
+    border-color: #28a745;
+}
+
+.invalid {
+    border-color: #dc3545;
+}
+
