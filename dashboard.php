@@ -1,3 +1,11 @@
+<?php 
+
+session_set_cookie_params(2678400);
+session_start();
+
+require_once 'oauth.php';
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +20,7 @@
 
 	<link rel="stylesheet" href="./assets/dashboard.css">
 
-	<link rel="icon" href="https://res.cloudinary.com/andikan/image/upload/v1570152012/S-ico_gvjpel.png">
+	<link rel="icon" href="./assets/S-ico.png">
 </head>
 <body>
 	<div class="body-wrapper">
@@ -24,19 +32,39 @@
 						<path d="M22.3722 11.76C20.2922 11.76 18.6389 12.2667 17.4122 13.28C16.2389 14.24 15.6522 15.5467 15.6522 17.2C15.6522 18.8 16.3722 20.08 17.8122 21.04C19.3055 22 22.6922 23.1467 27.9722 24.48C33.3055 25.76 37.4389 27.7067 40.3722 30.32C43.3055 32.9333 44.7722 36.7467 44.7722 41.76C44.7722 46.7733 42.8789 50.8533 39.0922 54C35.3589 57.0933 30.4255 58.64 24.2922 58.64C15.4389 58.64 7.46552 55.36 0.372188 48.8L7.81219 39.68C13.8389 44.96 19.4122 47.6 24.5322 47.6C26.8255 47.6 28.6122 47.12 29.8922 46.16C31.2255 45.1467 31.8922 43.8133 31.8922 42.16C31.8922 40.4533 31.1989 39.12 29.8122 38.16C28.4255 37.1467 25.6789 36.1333 21.5722 35.12C15.0655 33.5733 10.2922 31.5733 7.25219 29.12C4.26552 26.6133 2.77219 22.72 2.77219 17.44C2.77219 12.1067 4.66552 8 8.45219 5.12C12.2922 2.24 17.0655 0.799997 22.7722 0.799997C26.5055 0.799997 30.2389 1.44 33.9722 2.72C37.7055 4 40.9589 5.81333 43.7322 8.16L37.4122 17.28C32.5589 13.6 27.5455 11.76 22.3722 11.76Z" fill="#0099FF"/>
 						</svg>
 					</div></a>
-					<div class="extra-link d-none">
+					<div class="extra-link">
 						<div class="text-right text-capitalize">
-							<a href="#" class="btn btn-primary btn-sm">Login</a>
-							<a href="#" class="btn btn-warning btn-sm">Register</a>
+							<?php if(!isset($_SESSION['loggedin'])): ?>
+								<a href="<?php echo $client->createAuthUrl() ?>" class="btn mb-1" style="background-color:#dd4b39;border-color:#dd4b39;color:#fff">Continue with Google</a>
+							<?php endif; ?>
+							<?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true ): ?>
+								<a href="/logout.php" style="text-decoration:none;">Logout</a>
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>
 			</header>
 			<main>
+				<div class="container pt-5">
+					<div class="row">
+						<div class="col-sm-12 col-md-5 mx-auto text-center">
+							<?php if(!isset($_SESSION['loggedin'])): ?>
+								<div class="alert alert-warning" role="alert" id="err-msg">
+									<strong>You are accessing this page as a guest</strong>
+								</div>
+							<?php endif; ?>
+							<?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true ): ?>
+								<div class="alert alert-info" role="alert" id="err-msg">
+									Welcome back, <strong><?php echo $_SESSION['name'] ?></strong>
+								</div>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
 				<div class="new-container mx-auto d-none">
 					<a href="#" class="btn btn-primary btn-sm">Create New Calculation</a><br>
 				</div>
-				<div class="app mt-5 pt-3 pb-5">
+				<div class="app mt-3 pb-5">
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-sm-12">
