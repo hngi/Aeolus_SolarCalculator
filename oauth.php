@@ -1,10 +1,8 @@
 <?php require ("vendor/autoload.php");
 
-// $client_id = '625389164645-btbi7rnr6sosqbsq7ms6g7b58r6j6arr.apps.googleusercontent.com';
-$client_id = '1062295874589-g5u6pcq89nah6sr5dqpf496rrl2dmf5h.apps.googleusercontent.com';
-// $client_secret = 'E6iLIRpnOafSxI9-0xNQcp9v';
-$client_secret = 'bHKoSytblTT-JSJAso_h-oHs';
-$redirect_uri = 'http://hngsolar.herokuapp.com/my-account.php';
+$client_id = '';
+$client_secret = '';
+$redirect_uri = '';
 
 // $redirect_uri = 'http://localhost:500/my-account.php';
 
